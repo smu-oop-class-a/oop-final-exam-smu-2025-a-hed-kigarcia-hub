@@ -128,6 +128,7 @@
             movieListPanel.Padding = new Padding(15);
             movieListPanel.Size = new Size(608, 450);
             movieListPanel.TabIndex = 2;
+            movieListPanel.Paint += movieListPanel_Paint;
             // 
             // NitplekzViewerForm
             // 

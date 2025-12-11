@@ -4,11 +4,12 @@ namespace OOP.FinalTerm.Exam.Repository
 {
     public interface IDirectorRepository
     {
+        
         /// <summary>
         /// Adds a new director to the database.
         /// </summary>
         void AddDirector(DirectorModel director);
-
+        _dbConnection.Insert(director);
         /// <summary>
         /// Retrieves all directors from the database.
         /// </summary>

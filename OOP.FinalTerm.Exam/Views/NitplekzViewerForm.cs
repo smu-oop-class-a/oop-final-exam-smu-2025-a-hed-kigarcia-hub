@@ -158,10 +158,10 @@ namespace OOP.FinalTerm.Exam
             int movieControlHeight = 300;
             int padding = 15;
             int itemSpacing = 10;
-            
+
             // Available width for movies
             int availableWidth = movieListPanel.Width - (padding * 2) - 17; // 17 for scrollbar
-            
+
             // Calculate items per row (3-4 items max)
             int itemsPerRow = availableWidth / (movieControlWidth + itemSpacing);
             itemsPerRow = Math.Max(1, Math.Min(itemsPerRow, 4)); // Min 1, Max 4 items per row
@@ -198,7 +198,7 @@ namespace OOP.FinalTerm.Exam
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
                 var settingsForm = new SettingsForm(_movieRepository);
                 settingsForm.ShowDialog();
-                
+
                 // Auto-refresh the movie list after settings form closes
                 LoadAllMovies();
             }
@@ -345,6 +345,11 @@ namespace OOP.FinalTerm.Exam
         #endregion
 
         private void NitplekzViewerForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void movieListPanel_Paint(object sender, PaintEventArgs e)
         {
 
         }

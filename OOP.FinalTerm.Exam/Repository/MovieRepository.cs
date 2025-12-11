@@ -1,5 +1,6 @@
-﻿using SQLite;
+﻿using OOP.FinalTerm.Exam.Model;
 using OOP.FinalTerm.Exam.Utils;
+using SQLite;
 
 namespace OOP.FinalTerm.Exam.Repository
 {
@@ -9,6 +10,7 @@ namespace OOP.FinalTerm.Exam.Repository
 
         public MovieRepository()
         {
+            return _dbConnection.Find<DirectorModel>(id);
             _dbConnection = new SQLiteConnection(DatabaseHelper.GetDatabasePath());
             _dbConnection.CreateTable<MovieModel>();
         }

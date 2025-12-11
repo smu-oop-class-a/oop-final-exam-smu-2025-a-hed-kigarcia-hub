@@ -43,6 +43,7 @@ namespace OOP.FinalTerm.Exam.Views
         /// Returns the Director object with user-entered data
         /// TODO: Students will implement this method to map form controls to Director properties
         /// </summary>
+        /// 
         public DirectorModel GetDirector()
         {
             // TODO: Map form controls to _director properties
@@ -57,24 +58,37 @@ namespace OOP.FinalTerm.Exam.Views
 
         private void BtnSave_Click(object sender, EventArgs e)
         {
-            // TODO: Students will implement validation here
-            // Example validation:
-            // if (string.IsNullOrWhiteSpace(txtFirstName.Text))
-            // {
-            //     MessageBox.Show("First Name is required.", "Validation Error", 
-            //         MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            //     txtFirstName.Focus();
-            //     return;
-            // }
-            //
-            // if (string.IsNullOrWhiteSpace(txtLastName.Text))
-            // {
-            //     MessageBox.Show("Last Name is required.", "Validation Error", 
-            //         MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            //     txtLastName.Focus();
-            //     return;
-            // }
+            if (string.IsNullOrWhiteSpace(txtFirstName.Text))
+            {
+                MessageBox.Show("First Name is required.", "Validation Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtFirstName.Focus();
+                return;
+            }
 
+            if (string.IsNullOrWhiteSpace(txtLastName.Text))
+            {
+                MessageBox.Show("Last Name is required.", "Validation Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtLastName.Focus();
+                return;
+            }
+            // }
+            if (string.IsNullOrWhiteSpace(txtFirstName.Text))
+            {
+                MessageBox.Show("First Name is required.", "Validation Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtFirstName.Focus();
+                return;
+            }
+
+            if (string.IsNullOrWhiteSpace(txtLastName.Text))
+            {
+                MessageBox.Show("Last Name is required.", "Validation Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtLastName.Focus();
+                return;
+            }
             _directorRepository.AddDirector(GetDirector());
 
             this.DialogResult = DialogResult.OK;
@@ -155,5 +169,10 @@ namespace OOP.FinalTerm.Exam.Views
             }
         }
         #endregion
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
